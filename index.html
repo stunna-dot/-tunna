@@ -33,10 +33,26 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(52px, 9vw, 100px);
     letter-spacing: 0.1em;
-    background: linear-gradient(160deg, #ffffff 0%, #888 60%, #333 100%);
+    background: linear-gradient(
+      120deg,
+      #333 0%,
+      #777 20%,
+      #ffffff 38%,
+      #ffffff 42%,
+      #777 60%,
+      #333 80%,
+      #777 100%
+    );
+    background-size: 250% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 120% center; }
+    100% { background-position: -120% center; }
   }
   .header p {
     font-size: 10px;
